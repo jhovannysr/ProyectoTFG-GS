@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1200.0" style="-fx-background-color: white;" stylesheets="@../styles/stylesVehicleModel.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.VehicleModelSController">
+    <children>
+        <AnchorPane onMouseDragged="#handleMouseDragged" onMousePressed="#handleMousePressed" prefHeight="72.0" prefWidth="1200.0" styleClass="menuPane" stylesheets="@../styles/stylesVehicleModel.css">
+            <children>
+                <ImageView fitHeight="100.0" fitWidth="150.0" layoutX="42.0" layoutY="15.0" onMouseClicked="#abrirHomeConSesion" pickOnBounds="true" preserveRatio="true" styleClass="imgLogo">
+                    <image>
+                        <Image url="@../images/TeslaLogoMain.png" />
+                    </image>
+                </ImageView>
+                <ImageView id="img_minimizarVentana" fitHeight="27.0" fitWidth="25.0" layoutX="1105.0" layoutY="24.0" onMouseClicked="#minimiarVentana" pickOnBounds="true" preserveRatio="true" styleClass="imgMinimizar">
+                    <image>
+                        <Image url="@../icons/minimizar.png" />
+                    </image>
+                </ImageView>
+                <ImageView id="img_cerrarVentana" fitHeight="27.0" fitWidth="25.0" layoutX="1144.0" layoutY="24.0" onMouseClicked="#cerrarVentana" pickOnBounds="true" preserveRatio="true" styleClass="imgCerrar">
+                    <image>
+                        <Image url="@../icons/cerrar.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="-1.0" layoutY="72.0" prefHeight="678.0" prefWidth="782.0" style="-fx-background-color: white;">
+            <children>
+                <ImageView fitHeight="82.0" fitWidth="35.0" layoutX="61.0" layoutY="586.0" onMouseClicked="#abrirHomeConSesion" pickOnBounds="true" preserveRatio="true" styleClass="imgLogo">
+                    <image>
+                        <Image url="@../icons/volver.png" />
+                    </image>
+                </ImageView>
+                <ImageView fx:id="imageViewVehicle" fitHeight="434.0" fitWidth="738.0" layoutX="33.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/vehiclesModelS/vehicleModelSCar.jpg" />
+                    </image>
+                </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="754.0" layoutY="277.0" onMouseClicked="#handleNext" pickOnBounds="true" preserveRatio="true" styleClass="buttonLR">
+               <image>
+                  <Image url="@../icons/iconLeftG.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="23.0" layoutY="277.0" onMouseClicked="#handlePrev" pickOnBounds="true" preserveRatio="true" styleClass="buttonLR">
+               <image>
+                  <Image url="@../icons/iconRightG.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="label_TotalPrice" layoutX="299.0" layoutY="580.0" styleClass="labelTotal" text="Total: 92.990€" />
+            <Label fx:id="label_MensualPrice" layoutX="411.0" layoutY="580.0" styleClass="labelMensual" text="Plazo 48meses: 0.000€ /mes" />
+            </children>
+        </AnchorPane>
+        <ScrollPane hbarPolicy="NEVER" hmax="0.0" layoutX="783.0" layoutY="72.0" prefHeight="678.0" prefWidth="416.0" style="-fx-border-color: white;" styleClass="borderless-scroll-pane" vbarPolicy="NEVER">
+            <content>
+                <VBox focusTraversable="true" prefHeight="678.0" prefWidth="414.0" style="-fx-background-color: white;">
+                    <children>
+                        <AnchorPane prefHeight="1612.0" prefWidth="390.0" stylesheets="@../styles/stylesVehicleModel.css">
+                            <children>
+                                <Label layoutX="149.0" layoutY="62.0" styleClass="title" text="Model S">
+                                    <font>
+                                        <Font size="30.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="117.0" layoutY="117.0" styleClass="labelGeneral" text="Entrega estimada: mar. – abr. 2025" />
+                                <HBox fx:id="hboxDualMotor" layoutX="56.0" layoutY="160.0" onMouseClicked="#handleDualMotor" prefHeight="142.0" prefWidth="302.0" styleClass="cuadrosHBox">
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+                                 <children>
+                                    <Label layoutX="17.0" layoutY="17.0" styleClass="labelGeneralBlack" text="Motor Dual" />
+                                    <Label layoutX="17.0" layoutY="36.0" styleClass="labelGeneralBlack" text="Tracción a las cuatro ruedas" />
+                                    <Label layoutX="17.0" layoutY="65.0" styleClass="labelGeneralBlack" text="634 km Autonomía (WLTP)" />
+                                    <Label layoutX="17.0" layoutY="84.0" styleClass="labelGeneralBlack" text="3,02s - 0-100km/h" />
+                                    <Label layoutX="17.0" layoutY="104.0" styleClass="labelGeneralBlack" text="250km/h velocidad máxima" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="60.0" layoutY="14.0" styleClass="labelGeneralBlack" text="92.990€" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                                </HBox>
+                        <HBox fx:id="hboxPlaid" layoutX="56.0" layoutY="326.0" onMouseClicked="#handlePlaid" prefHeight="97.0" prefWidth="302.0" styleClass="cuadrosHBox">
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+                                 <children>
+                                    <Label layoutX="17.0" layoutY="17.0" styleClass="labelGeneralBlack" text="Plaid" />
+                                    <Label layoutX="18.0" layoutY="42.0" styleClass="labelGeneralBlack" text="600 km Autonomía (WLTP)" />
+                                    <Label layoutX="18.0" layoutY="61.0" styleClass="labelGeneralBlack" text="2,1s - 0-100km/h" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="60.0" layoutY="14.0" styleClass="labelGeneralBlack" text="107.990€" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                        <Label layoutX="157.0" layoutY="443.0" styleClass="title" text="Pintura">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <Pane fx:id="imgPaintRed" layoutX="213.0" layoutY="496.0" prefHeight="50.0" prefWidth="50.0" styleClass="paneImgBorder">
+                           <children>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" onMouseClicked="#handlePaintRedSelect" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/vehicles/PaintRed.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="imgPaintBlue" layoutX="271.0" layoutY="496.0" prefHeight="50.0" prefWidth="50.0" styleClass="paneImgBorder">
+                           <children>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" onMouseClicked="#handlePaintBlueSelect" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/vehicles/PaintBlue.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="imgPaintBlack" layoutX="154.0" layoutY="496.0" prefHeight="50.0" prefWidth="50.0" styleClass="paneImgBorder">
+                           <children>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" onMouseClicked="#handlePaintBlackSelect" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/vehicles/PaintBlack.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="imgPaintWhite" layoutX="96.0" layoutY="496.0" prefHeight="50.0" prefWidth="50.0" styleClass="paneImgBorder">
+                           <children>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" onMouseClicked="#handlePaintWhiteSelect" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/vehicles/paintWhite.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <ImageView fitHeight="242.0" fitWidth="302.0" layoutX="56.0" layoutY="587.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/vehicles/EnhancedAutopilot.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btn_enhancedAutopilot" layoutX="56.0" layoutY="850.0" mnemonicParsing="false" onMouseClicked="#handleEnhancedAutopilot" prefHeight="35.0" prefWidth="302.0" styleClass="btnAnadir" text="Añadir" />
+                        <ImageView fitHeight="242.0" fitWidth="302.0" layoutX="56.0" layoutY="937.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/vehicles/SelfDrivingCapability.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btn_selfDrivingCapability" layoutX="56.0" layoutY="1190.0" mnemonicParsing="false" onMouseClicked="#handleSelfDrivingCapability" prefHeight="35.0" prefWidth="302.0" styleClass="btnAnadir" text="Añadir" />
+                        <Label layoutX="163.0" layoutY="1265.0" styleClass="title" text="Carga">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <CheckBox fx:id="wallConnector" layoutX="56.0" layoutY="1317.0" mnemonicParsing="false" onMouseClicked="#handleWallConnector" prefHeight="35.0" prefWidth="110.0" styleClass="labelGeneral" text="Wall Connector">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </CheckBox>
+                        <Label layoutX="327.0" layoutY="1325.0" style="-fx-font-weight: bold;" text="535€">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="77.0" layoutY="1404.0" styleClass="title" text="Encargue su model S">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="114.0" layoutY="1451.0" styleClass="labelGeneral" text="Entrega estimada: mar. – abr. 2025" />
+                        <Button layoutX="56.0" layoutY="1488.0" mnemonicParsing="false" onMouseClicked="#buyVehicle" prefHeight="35.0" prefWidth="302.0" styleClass="btnAnadir" text="Comprar" />
+                        <Label layoutX="188.0" layoutY="1594.0" />
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </VBox>
+            </content>
+        </ScrollPane>
+      <Rectangle fx:id="overlay" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="780.0" stroke="BLACK" strokeType="INSIDE" styleClass="overlay" visible="false" width="1230.0" />
+      <Label fx:id="label_loading" alignment="CENTER" layoutX="477.0" layoutY="375.0" prefHeight="18.0" prefWidth="235.0" styleClass="labelLoading" text="Compra exitosa" visible="false" />
+      <ImageView fx:id="img_confirmacion" fitHeight="25.0" fitWidth="25.0" layoutX="583.0" layoutY="340.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../icons/iconBlue2.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

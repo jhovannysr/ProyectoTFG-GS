@@ -1,0 +1,180 @@
+.menuPane{
+    -fx-border-width: 0px 0px 2px 0px;
+    -fx-border-color: #f4f4f4;
+}
+
+.title{
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+}
+
+.btnAnadir{
+    -fx-background-radius: 5px;
+    -fx-background-color:  #3e6ae1;
+    -fx-text-fill: white; /* Cambia el color del texto a blanco */
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.btnAnadir:hover{
+    -fx-background-color: #3055ba;
+}
+
+.btnQuitar{
+    -fx-background-radius: 5px;
+    -fx-background-color:  #e0e0e0;
+    -fx-text-fill: #6b6b6b;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.btnQuitar:hover{
+    -fx-background-color: #bbbbbb;
+}
+
+.labelGeneral{
+    -fx-font-size: 12px;
+    -fx-text-fill: #5f6165;
+}
+
+
+.labelGeneralBlack{
+    -fx-text-fill: #5c5e62;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.labelGeneralBlackFocus{
+    -fx-text-fill: black;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.labelTotal{
+    -fx-padding: 10px;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-text-fill: #5f6165;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1px; /* Ancho del borde */
+    -fx-border-radius: 10px 0px 0px 10px;
+}
+
+.labelTotal:hover{
+    -fx-background-color: #e7e7e7;
+    -fx-background-radius: 10px 0px 0px 10px;
+}
+
+.labelMensual{
+    -fx-padding: 10px;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-text-fill: #5f6165;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1px 1px 1px 0px; /* Ancho del borde */
+    -fx-border-radius: 0px 10px 10px 0px;
+}
+
+.labelMensual:hover{
+    -fx-background-color: #e7e7e7;
+    -fx-background-radius: 0px 10px 10px 0px;
+}
+
+.imgPain{
+    -fx-border-radius: 50px;
+}
+
+.paneImgBorder:hover{
+    /*-fx-border-radius: 50px;*/
+    -fx-background-color: white;
+    -fx-border-color: blue; /* Color del borde (azul) */
+    -fx-border-width: 4px; /* Ancho del borde */
+    -fx-border-radius: 50px; /* Radio de las esquinas del borde (opcional) */
+    -fx-padding: 5px; /* Espaciado entre la imagen y el borde */
+}
+
+.paneImgBorder2{
+    /*-fx-border-radius: 50px;*/
+    -fx-background-color: white;
+    -fx-border-color: blue; /* Color del borde (azul) */
+    -fx-border-width: 4px; /* Ancho del borde */
+    -fx-border-radius: 50px; /* Radio de las esquinas del borde (opcional) */
+    -fx-padding: 5px; /* Espaciado entre la imagen y el borde */
+}
+
+.cuadrosHBox{
+    -fx-border-color: gray;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+}
+
+.cuadrosHBox:hover{
+    -fx-border-width: 4px;
+    -fx-border-color: #3e6ae1;
+    -fx-border-radius: 5px;
+}
+
+.cuadrosHBox2{
+    -fx-border-width: 4px;
+    -fx-border-color: #3e6ae1;
+    -fx-border-radius: 5px;
+}
+
+.buttonLR:hover{
+    -fx-scale-x: 1.1; /* Escala en el eje X (aumenta el ancho) */
+    -fx-scale-y: 1.1; /* Escala en el eje Y (aumenta la altura) */
+}
+
+
+.overlay {
+    -fx-fill: white; /* Blanco completamente opaco */
+    -fx-opacity: 0.5; /* Asegura que no haya transparencia */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 0.1, 0.3, 0, 0); /* Sombra opcional */
+}
+
+.labelLoading{
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-fill: white; /* Blanco completamente opaco */
+}
+
+/*Estilos globales*/
+.imgLogo:hover{
+    -fx-scale-x: 1.1; /* Escala en el eje X (aumenta el ancho) */
+    -fx-scale-y: 1.1; /* Escala en el eje Y (aumenta la altura) */
+}
+
+.imgMinimizar:hover{
+    -fx-scale-x: 1.1; /* Escala en el eje X (aumenta el ancho) */
+    -fx-scale-y: 1.1; /* Escala en el eje Y (aumenta la altura) */
+}
+
+.imgCerrar:hover{
+    -fx-scale-x: 1.1; /* Escala en el eje X (aumenta el ancho) */
+    -fx-scale-y: 1.1; /* Escala en el eje Y (aumenta la altura) */
+}
+
+/* Personalizar la barra de desplazamiento vertical */
+.scroll-bar:vertical {
+    -fx-background-color: lightgray; /* Color de fondo de la pista de la barra de desplazamiento */
+    -fx-padding: 0; /* Espaciado alrededor de la barra */
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: darkgray; /* Color del "thumb" de la barra de desplazamiento */
+    -fx-background-radius: 10; /* Radio de esquina del "thumb" */
+}
+
+.scroll-bar:vertical .track {
+    -fx-background-color: #f1f1f1; /* Hacer la pista de la barra de desplazamiento transparente */
+}
+
+.borderless-scroll-pane {
+    -fx-background-color: transparent; /* Quita el fondo */
+    -fx-border-color: transparent; /* Quita el borde */
+    -fx-padding: 0; /* Opcional: ajusta el relleno si es necesario */
+}
+
+.borderless-scroll-pane .viewport {
+    -fx-background-color: transparent; /* Asegura que el área de vista también sea transparente */
+}

@@ -1,0 +1,68 @@
+.buttonMenu{
+    -fx-background-color: transparent;
+    -fx-font-size: 14px;
+}
+
+.buttonMenu:hover{
+    -fx-background-radius: 5px;
+    -fx-background-color: #bacacf;
+}
+
+.buttonModelsEncargar{
+    -fx-background-color: black;
+    -fx-text-color: white;
+    -fx-background-radius: 4px;     /* Radio de las esquinas del botón */
+    -fx-font-weight: bold;
+    -fx-transition: 2s;
+}
+
+.buttonModelsEncargar:hover{
+    -fx-background-color: #2f2f2f;
+}
+
+.buttonModelsPruebaConduccion{
+    -fx-background-color: white;
+    -fx-text-color: black;
+    -fx-background-radius: 4px;     /* Radio de las esquinas del botón */
+    -fx-font-weight: bold;
+}
+
+.buttonModelsPruebaConduccion:hover{
+    -fx-background-color: #e1e1e1;
+}   
+
+.labelTitle{
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+/* Personalizar la barra de desplazamiento vertical */
+.scroll-bar:vertical {
+    -fx-background-color: lightgray; /* Color de fondo de la pista de la barra de desplazamiento */
+    -fx-padding: 0; /* Espaciado alrededor de la barra */
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: darkgray; /* Color del "thumb" de la barra de desplazamiento */
+    -fx-background-radius: 10; /* Radio de esquina del "thumb" */
+}
+
+.scroll-bar:vertical .track {
+    -fx-background-color: #f1f1f1; /* Hacer la pista de la barra de desplazamiento transparente */
+}
+
+/*Estilos globales*/
+.imgLogo:hover{
+    -fx-scale-x: 1.1; /* Escala en el eje X (aumenta el ancho) */
+    -fx-scale-y: 1.1; /* Escala en el eje Y (aumenta la altura) */
+}
+
+.imgMinimizar:hover{
+    -fx-scale-x: 1.1; /* Escala en el eje X (aumenta el ancho) */
+    -fx-scale-y: 1.1; /* Escala en el eje Y (aumenta la altura) */
+}
+
+.imgCerrar:hover{
+    -fx-scale-x: 1.1; /* Escala en el eje X (aumenta el ancho) */
+    -fx-scale-y: 1.1; /* Escala en el eje Y (aumenta la altura) */
+}

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane fx:id="mainPane" prefHeight="750.0" prefWidth="1200.0" style="-fx-background-color: white;" stylesheets="@../styles/stylesMisDatos.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MisDatosController">
+    
+    <children>
+        <AnchorPane onMouseDragged="#handleMouseDragged" onMousePressed="#handleMousePressed" prefHeight="72.0" prefWidth="1200.0" styleClass="menuPane" stylesheets="@../styles/stylesMisDatos.css">
+            <children>
+                <ImageView fitHeight="100.0" fitWidth="150.0" layoutX="42.0" layoutY="15.0" onMouseClicked="#abrirHomeConSesion" pickOnBounds="true" preserveRatio="true" styleClass="imgLogo">
+                    <image>
+                        <Image url="@../images/TeslaLogoMain.png" />
+                    </image>
+                </ImageView>
+                <ImageView id="img_minimizarVentana" fitHeight="27.0" fitWidth="25.0" layoutX="1105.0" layoutY="24.0" onMouseClicked="#minimiarVentana" pickOnBounds="true" preserveRatio="true" styleClass="imgMinimizar">
+                    <image>
+                        <Image url="@../icons/minimizar.png" />
+                    </image>
+                </ImageView>
+                <ImageView id="img_cerrarVentana" fitHeight="27.0" fitWidth="25.0" layoutX="1144.0" layoutY="24.0" onMouseClicked="#cerrarVentana" pickOnBounds="true" preserveRatio="true" styleClass="imgCerrar">
+                    <image>
+                        <Image url="@../icons/cerrar.png" />
+                    </image>
+                </ImageView>
+            <Button layoutX="952.0" layoutY="22.0" mnemonicParsing="false" onMouseClicked="#eliminarCuenta" styleClass="buttonMenu" text="Eliminar Cuenta" />
+            </children>
+        </AnchorPane>
+        <Label fx:id="label_misDatos" layoutX="446.0" layoutY="101.0" style="-fx-font-weight: bold;" text="Mis Datos">
+            <font>
+                <Font size="28.0" />
+            </font>
+        </Label>
+      <Label layoutX="446.0" layoutY="160.0" style="-fx-font-weight: bold;" text="Nombre" textFill="#6e6e6e">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="446.0" layoutY="235.0" style="-fx-font-weight: bold;" text="País" textFill="#6e6e6e">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="446.0" layoutY="310.0" style="-fx-font-weight: bold;" text="Edad" textFill="#6e6e6e">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+        <Label layoutX="446.0" layoutY="385.0" style="-fx-font-weight: bold;" text="Correo electrónico" textFill="#6e6e6e">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="446.0" layoutY="460.0" style="-fx-font-weight: bold;" text="Contraseña" textFill="#6e6e6e">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+      <TextField fx:id="textfield_campoNombre" disable="true" focusTraversable="false" layoutX="446.0" layoutY="185.0" prefHeight="40.0" prefWidth="308.0" styleClass="campoDeTexto" stylesheets="@../styles/stylesMisDatos.css" />
+      <TextField fx:id="textfield_campoPais" disable="true" focusTraversable="false" layoutX="446.0" layoutY="260.0" prefHeight="40.0" prefWidth="308.0" styleClass="campoDeTexto" stylesheets="@../styles/stylesMisDatos.css" />
+      <TextField fx:id="textfield_campoEdad" disable="true" focusTraversable="false" layoutX="446.0" layoutY="335.0" prefHeight="40.0" prefWidth="308.0" styleClass="campoDeTexto" stylesheets="@../styles/stylesMisDatos.css" />
+        <TextField fx:id="textfield_campoCorreo" disable="true" focusTraversable="false" layoutX="446.0" layoutY="410.0" prefHeight="40.0" prefWidth="308.0" styleClass="campoDeTexto" stylesheets="@../styles/stylesMisDatos.css" />
+        <TextField fx:id="textfield_campoPassword" disable="true" focusTraversable="false" layoutX="446.0" layoutY="485.0" prefHeight="40.0" prefWidth="308.0" styleClass="campoDeTexto" stylesheets="@../styles/stylesMisDatos.css" visible="false" />
+        <Button fx:id="btn_Modificar" layoutX="446.0" layoutY="547.0" mnemonicParsing="false" onMouseClicked="#updateCustomer" prefHeight="40.0" prefWidth="308.0" styleClass="btnSiguiente" stylesheets="@../styles/stylesMisDatos.css" text="Modificar" />
+        <ImageView fitHeight="82.0" fitWidth="35.0" layoutX="72.0" layoutY="653.0" onMouseClicked="#abrirHomeConSesion" pickOnBounds="true" preserveRatio="true" styleClass="imgLogo">
+            <image>
+                <Image url="@../icons/volver.png" />
+            </image>
+        </ImageView>
+      <TextFlow layoutX="449.0" layoutY="597.0" prefHeight="25.0" prefWidth="302.0" styleClass="labelEnlace" stylesheets="@../styles/stylesMisDatos.css">
+         <children>
+            <Text fill="#302f2f" onMouseClicked="#webAvisoDePrivacidad" strokeType="OUTSIDE" strokeWidth="0.0" text="Al continuar, entiendo y acepto el Aviso de privacidad y los Términos de uso de Tesla para crear una cuenta Tesla" textAlignment="CENTER" wrappingWidth="290.28558349609375" />
+         </children>
+      </TextFlow>
+      <ImageView fx:id="img_ToolTip" fitHeight="20.0" fitWidth="25.0" layoutX="731.0" layoutY="460.0" onMouseEntered="#handle_enteredToolTip" onMouseExited="#handle_exitedToolTip" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/tooltipAnimated.gif" />
+         </image>
+      </ImageView>
+      <Label fx:id="label_tooltip" layoutX="755.0" layoutY="378.0" prefHeight="80.0" prefWidth="192.0" styleClass="labelTooptip" text="Introduzca su contraseña para confirmar que esta cuenta le pertenece." visible="false" wrapText="true" />
+      <PasswordField fx:id="textfield_campoHidePassword" disable="true" layoutX="446.0" layoutY="485.0" prefHeight="40.0" prefWidth="308.0" styleClass="campoDeTexto" />
+      <ImageView fx:id="img_eyeNoVisible" fitHeight="21.0" fitWidth="25.0" layoutX="721.0" layoutY="494.0" onMouseClicked="#handle_eyeNoVisible" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../icons/eyeNoVisible.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="img_eyeVisible" fitHeight="21.0" fitWidth="25.0" layoutX="721.0" layoutY="494.0" onMouseClicked="#handle_eyeVisible" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../icons/eyeVisible.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="label_passwordIncorrecto" layoutX="631.0" layoutY="525.0" prefHeight="18.0" prefWidth="122.0" text="Contraseña incorrecta" textAlignment="RIGHT" textFill="RED" visible="false" />
+      <Rectangle fx:id="overlay" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="760.0" stroke="BLACK" strokeType="INSIDE" styleClass="overlay" visible="false" width="1210.0" />
+      <ImageView fx:id="img_loading" fitHeight="25.0" fitWidth="25.0" layoutX="599.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../icons/loading4.gif" />
+         </image>
+      </ImageView>
+      <Label fx:id="label_loading" alignment="CENTER" layoutX="493.0" layoutY="355.0" prefHeight="18.0" prefWidth="235.0" styleClass="labelLoading" text="Cargando datos" visible="false" AnchorPane.leftAnchor="493.0" AnchorPane.rightAnchor="482.19999999999993" />
+      <ImageView fx:id="img_confirmacion" fitHeight="25.0" fitWidth="25.0" layoutX="599.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../icons/iconBlue2.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

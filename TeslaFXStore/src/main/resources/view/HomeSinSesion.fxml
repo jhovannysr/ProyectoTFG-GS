@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" prefHeight="750.0" prefWidth="1200.0" stylesheets="@../styles/stylesHomeSinSesion.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeSinSesionController">
+    <children>
+        <ScrollPane id="scrollPane" fitToHeight="false" fitToWidth="true" hbarPolicy="NEVER" prefHeight="750.0" prefWidth="1200.0" stylesheets="@../styles/stylesHomeSinSesion.css">
+            <content>
+                <!--<VBox minHeight="0.0" minWidth="0.0" prefHeight="750.0" prefWidth="1200.0">-->
+                <VBox fillWidth="true" spacing="0">
+                    <children>
+                        <AnchorPane onMouseDragged="#handleMouseDragged" onMousePressed="#handleMousePressed" prefHeight="72.0" prefWidth="1200.0">
+                            <children>
+                                <ImageView fitHeight="79.0" fitWidth="1186.0" pickOnBounds="true">
+                                    <image>
+                                        <Image url="@../images/BarraMenu.jpg" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="100.0" fitWidth="150.0" layoutX="42.0" layoutY="15.0" onMouseClicked="#abrirHomeSinSesion" pickOnBounds="true" preserveRatio="true" styleClass="imgLogo">
+                                    <image>
+                                        <Image url="@../images/TeslaLogoMain.png" />
+                                    </image>
+                                </ImageView>
+                                <Button layoutX="921.0" layoutY="23.0" mnemonicParsing="false" onMouseClicked="#webOficialTesla" styleClass="buttonMenu" stylesheets="@../styles/stylesHomeSinSesion.css" text="Web" />
+                                <Button id="btn_IniciarSesion" layoutX="969.0" layoutY="23.0" mnemonicParsing="false" onMouseClicked="#abrirLogin" styleClass="buttonMenu" stylesheets="@../styles/stylesHomeSinSesion.css" text="Iniciar Sesión" />
+                                <ImageView id="img_minimizarVentana" fitHeight="27.0" fitWidth="25.0" layoutX="1099.0" layoutY="25.0" onMouseClicked="#minimizarVentana" pickOnBounds="true" preserveRatio="true" styleClass="imgMinimizar">
+                                    <image>
+                                        <Image url="@../icons/minimizar.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView id="img_cerrarVentana" fitHeight="27.0" fitWidth="25.0" layoutX="1134.0" layoutY="25.0" onMouseClicked="#cerrarVentana" pickOnBounds="true" preserveRatio="true" styleClass="imgCerrar">
+                                    <image>
+                                        <Image url="@../icons/cerrar.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutY="75.0" prefWidth="1186.0"> 
+                            <children>
+                                <ImageView fitHeight="750.0" fitWidth="1186.0" pickOnBounds="true" preserveRatio="true" styleClass="buttonMenu">
+                                    <image>
+                                        <Image url="@../images/ModelYMain.jpg" />
+                                    </image>
+                                </ImageView>
+                                <Button id="btn_EncargarY" layoutX="384.0" layoutY="534.0" mnemonicParsing="false" onMouseClicked="#abrirLoginDesdeEncargar" prefHeight="34.0" prefWidth="202.0" styleClass="buttonModelsEncargar" stylesheets="@../styles/stylesHomeSinSesion.css" text="Encargar" textFill="WHITE" />
+                                <Button id="btn_pruebaConduccionY" layoutX="602.0" layoutY="534.0" mnemonicParsing="false" onMouseClicked="#webPruebaConduccionY" prefHeight="34.0" prefWidth="202.0" styleClass="buttonModelsPruebaConduccion" stylesheets="@../styles/stylesHomeSinSesion.css" text="Prueba de conducción" />
+                                <Label id="label_modelTitle" layoutX="532.0" layoutY="188.0" styleClass="labelTitle" stylesheets="@../styles/stylesHomeSinSesion.css" text="Model Y" textAlignment="CENTER" />
+                                <Label id="btn_modelPrice" layoutX="514.0" layoutY="224.0" text="Desde 29.900€">
+                                    <font>
+                                        <Font size="19.0" />
+                                    </font>
+                                </Label>
+                                <Label id="btn_modelDescription" layoutX="361.0" layoutY="252.0" text="Precio con la aplicación de los programas Tesla Boost e incentivos de movilidad eléctrica" textFill="#4b4747">
+                                    <font>
+                                        <Font size="11.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutY="75.0" prefWidth="1186.0"> 
+                            <children>
+                                <ImageView fitHeight="750.0" fitWidth="1186.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/Model3Main.jpg" />
+                                    </image>
+                                </ImageView>
+                                <Button id="btn_Encargar3" layoutX="384.0" layoutY="534.0" mnemonicParsing="false" onMouseClicked="#abrirLoginDesdeEncargar" prefHeight="34.0" prefWidth="202.0" styleClass="buttonModelsEncargar" stylesheets="@../styles/stylesHomeSinSesion.css" text="Encargar" textFill="WHITE" />
+                                <Button id="btn_pruebaConduccion3" layoutX="602.0" layoutY="534.0" mnemonicParsing="false" onMouseClicked="#webPruebaConduccion3" prefHeight="34.0" prefWidth="202.0" styleClass="buttonModelsPruebaConduccion" stylesheets="@../styles/stylesHomeSinSesion.css" text="Prueba de conducción" />
+                                <Label id="label_modelTitle" layoutX="532.0" layoutY="188.0" styleClass="labelTitle" stylesheets="@../styles/stylesHomeSinSesion.css" text="Model 3" textAlignment="CENTER" />
+                                <Label id="label_modelPrice" layoutX="514.0" layoutY="224.0" text="Desde 26.990€">
+                                    <font>
+                                        <Font size="19.0" />
+                                    </font>
+                                </Label>
+                                <Label id="label_modelDescription" layoutX="358.0" layoutY="252.0" text="Precio con la aplicación de los programas Tesla Boost e incentivos de movilidad eléctrica" textFill="#4b4747">
+                                    <font>
+                                        <Font size="11.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutY="75.0" prefWidth="1186.0"> 
+                            <children>
+                                <ImageView fitHeight="750.0" fitWidth="1186.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/ModelS.jpg" />
+                                    </image>
+                                </ImageView>
+                                <Button id="btn_EncargarS" layoutX="384.0" layoutY="534.0" mnemonicParsing="false" onMouseClicked="#abrirLoginDesdeEncargar" prefHeight="34.0" prefWidth="202.0" styleClass="buttonModelsEncargar" stylesheets="@../styles/stylesHomeSinSesion.css" text="Encargar" textFill="WHITE" />
+                                <Button id="btn_pruebaConduccionS" layoutX="602.0" layoutY="534.0" mnemonicParsing="false" onMouseClicked="#webPruebaConduccionS" prefHeight="34.0" prefWidth="202.0" styleClass="buttonModelsPruebaConduccion" stylesheets="@../styles/stylesHomeSinSesion.css" text="Prueba de conducción" />
+                                <Label id="label_modelTitle" layoutX="532.0" layoutY="188.0" styleClass="labelTitle" stylesheets="@../styles/stylesHomeSinSesion.css" text="Model S" textAlignment="CENTER" textFill="WHITE" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutY="75.0" prefWidth="1186.0"> 
+                            <children>
+                                <ImageView fitHeight="750.0" fitWidth="1186.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/ModelXMain.jpg" />
+                                    </image>
+                                </ImageView>
+                                <Button id="btn_EncargarX" layoutX="384.0" layoutY="534.0" mnemonicParsing="false" onMouseClicked="#abrirLoginDesdeEncargar" prefHeight="34.0" prefWidth="202.0" styleClass="buttonModelsEncargar" stylesheets="@../styles/stylesHomeSinSesion.css" text="Encargar" textFill="WHITE" />
+                                <Button id="btn_pruebaConduccionX" layoutX="602.0" layoutY="534.0" mnemonicParsing="false" onMouseClicked="#webPruebaConduccionX" prefHeight="34.0" prefWidth="202.0" styleClass="buttonModelsPruebaConduccion" stylesheets="@../styles/stylesHomeSinSesion.css" text="Prueba de conducción" />
+                                <Label id="label_modelTitle" layoutX="532.0" layoutY="188.0" styleClass="labelTitle" stylesheets="@../styles/stylesHomeSinSesion.css" text="Model X" textAlignment="CENTER" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="mediaContainerVideo" prefHeight="200.0" prefWidth="200.0">
+
+                        </AnchorPane>
+                    </children>
+                </VBox>
+            </content>
+            <styleClass>
+                <String fx:value="scroll-bar" />
+                <String fx:value="thumb" />
+                <String fx:value="track" />
+            </styleClass>
+        </ScrollPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,73 @@
+/* Estilos de los pane */
+.anchorPaneMain{
+    -fx-border-width: 2px;
+    -fx-border-color: #9eb4f0;
+    -fx-border-radius: 6px; 
+    -fx-background-color: white;
+}
+
+.menuPane{
+    -fx-background-color: white;
+    -fx-border-width: 0px 0px 2px 0px;
+    -fx-border-color: #f4f4f4;
+}
+
+/* Estilos de los labels */
+.labelTitle{
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+}
+
+.labelDescriptions{
+    -fx-text-fill: #6e6e6e;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* Estilos del campo */
+.campoDeTexto{
+    -fx-background-color:  #f4f4f4;
+    -fx-background-radius: 5px;
+}
+
+.campoDeTexto:focused{
+    -fx-border-radius: 5px;
+    -fx-border-color: #dedede;
+    -fx-border-width: 1px;
+    -fx-background-radius: 10px;
+}
+
+/* Estilos del button */
+.btnButtons{
+    -fx-background-radius: 5px;
+    -fx-background-color:  #9eb4f0;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.btnButtons:hover{
+    -fx-background-color: #3e6ae1;
+}
+
+/*Estilos globales*/
+.imgLogo:hover{
+    -fx-scale-x: 1.1; /* Escala en el eje X (aumenta el ancho) */
+    -fx-scale-y: 1.1; /* Escala en el eje Y (aumenta la altura) */
+}
+
+.imgMinimizar:hover{
+    -fx-scale-x: 1.1; /* Escala en el eje X (aumenta el ancho) */
+    -fx-scale-y: 1.1; /* Escala en el eje Y (aumenta la altura) */
+}
+
+.imgFull:hover{
+    -fx-scale-x: 1.1; /* Escala en el eje X (aumenta el ancho) */
+    -fx-scale-y: 1.1; /* Escala en el eje Y (aumenta la altura) */
+}
+
+.imgCerrar:hover{
+    -fx-scale-x: 1.1; /* Escala en el eje X (aumenta el ancho) */
+    -fx-scale-y: 1.1; /* Escala en el eje Y (aumenta la altura) */
+}

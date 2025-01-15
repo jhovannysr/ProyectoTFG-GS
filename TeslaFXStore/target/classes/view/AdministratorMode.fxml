@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" prefHeight="830.0" prefWidth="1600.0" stylesheets="@../styles/stylesAdminstrator.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.administrator.AdministratorModeController">
+    <children>
+        <AnchorPane onMouseDragged="#handleMouseDragged" onMousePressed="#handleMousePressed" prefHeight="73.0" prefWidth="1600.0" styleClass="anchorPaneMain" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <children>
+                <ImageView fitHeight="100.0" fitWidth="150.0" layoutX="42.0" layoutY="15.0" onMouseClicked="#abrirHomeSinSesion" pickOnBounds="true" preserveRatio="true" styleClass="imgLogo">
+                    <image>
+                        <Image url="@../images/TeslaLogoMain.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="27.0" fitWidth="25.0" layoutX="1679.8" layoutY="24.0" onMouseClicked="#minimiarVentana" pickOnBounds="true" preserveRatio="true" styleClass="imgMinimizar" AnchorPane.rightAnchor="95.20000000000005">
+                    <image>
+                        <Image url="@../icons/minimizar.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="27.0" fitWidth="25.0" layoutX="1147.0" layoutY="25.0" onMouseClicked="#cerrarVentana" pickOnBounds="true" preserveRatio="true" styleClass="imgCerrar" AnchorPane.rightAnchor="28.0">
+                    <image>
+                        <Image url="@../icons/cerrar.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="27.0" fitWidth="25.0" layoutX="1680.6" layoutY="25.0" onMouseClicked="#fullVentana" pickOnBounds="true" preserveRatio="true" styleClass="imgFull" AnchorPane.rightAnchor="62.0">
+                    <image>
+                        <Image url="@../icons/pantallaCompleta.png" />
+                    </image>
+                </ImageView>
+            <Button fx:id="btn_miSesion" layoutX="1318.0" layoutY="23.0" prefHeight="25.0" prefWidth="110.0" styleClass="buttonMenu" stylesheets="@../styles/stylesHomeConSesion.css" text="Mi Sesión" AnchorPane.rightAnchor="171.5999999999999" />
+            </children>
+        </AnchorPane>
+        <HBox layoutY="72.0" prefHeight="850.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="72.0">
+            <children>
+                <!--Customer-->
+                <AnchorPane prefHeight="850.0" prefWidth="400.0" styleClass="anchorPaneMain" stylesheets="@../styles/stylesAdminstrator.css" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Label layoutX="94.0" layoutY="14.0" prefHeight="30.0" prefWidth="217.0" styleClass="labelTitle" text="Clientes" AnchorPane.leftAnchor="94.0" AnchorPane.rightAnchor="93.99999999999994">
+                            <font>
+                                <Font size="28.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="label_buscadorCustomer" layoutX="55.0" layoutY="214.0" prefHeight="20.0" prefWidth="394.0" styleClass="labelDescriptions" text="Introduce el Email" textFill="#6e6e6e" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="52.0">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="field_BusquedaCustomer" editable="false" focusTraversable="false" layoutX="60.0" layoutY="240.0" prefHeight="30.0" prefWidth="308.0" styleClass="campoDeTexto" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="52.0" />
+                        <ImageView fitHeight="82.0" fitWidth="35.0" layoutX="54.0" layoutY="700.0" onMouseClicked="#abrirHomeSinSesion" pickOnBounds="true" preserveRatio="true" styleClass="imgLogo">
+                            <image>
+                                <Image url="@../icons/volver.png" />
+                            </image>
+                        </ImageView>
+                        <Button fx:id="button_buscarCustomer" layoutX="62.4" layoutY="280.0" mnemonicParsing="false" onMouseClicked="#handle_buscarCustomer" prefHeight="30.0" prefWidth="318.0" styleClass="btnButtons" text="Buscar" visible="false" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="52.0" />
+                        <HBox layoutX="79.2" layoutY="60.0" prefHeight="30.0" prefWidth="308.0" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="52.0">
+                            <children>
+                                <Button id="button_AnadirCustomer" mnemonicParsing="false" onMouseClicked="#handle_anadirCustomer" prefHeight="30.0" prefWidth="248.0" styleClass="btnButtons" text="Añadir" HBox.hgrow="ALWAYS" />
+                                <ImageView fitHeight="30.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true" />
+                                <Button id="button_ModificarCustomer" mnemonicParsing="false" onMouseClicked="#handle_modificarCustomer" prefHeight="30.0" prefWidth="242.0" styleClass="btnButtons" text="Modificar" HBox.hgrow="ALWAYS" />
+                            </children>
+                        </HBox>
+                        <HBox layoutX="55.0" layoutY="98.0" prefHeight="30.0" prefWidth="308.0" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="52.0">
+                            <children>
+                                <Button id="button_ConsultaCustomer" mnemonicParsing="false" onMouseClicked="#handle_consultaCustomer" prefHeight="30.0" prefWidth="242.0" styleClass="btnButtons" text="Buscar (Email)" HBox.hgrow="ALWAYS" />
+                                <ImageView fitHeight="30.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true" />
+                                <Button id="button_consultaIdCustomer" mnemonicParsing="false" onMouseClicked="#handle_consultaIdCustomer" prefHeight="30.0" prefWidth="242.0" styleClass="btnButtons" text="Buscar (ID)" HBox.hgrow="ALWAYS" />
+                        <ImageView fitHeight="30.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true" />
+                        <Button id="button_consultaPaisCustomer" mnemonicParsing="false" onMouseClicked="#handle_consultaPaisCustomer" prefHeight="30.0" prefWidth="242.0" styleClass="btnButtons" text="Buscar (Pais)" />
+                            </children>
+                        </HBox>
+                        <HBox layoutX="77.4" layoutY="174.0" prefHeight="30.0" prefWidth="308.0" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="52.0">
+                            <children>
+                                <Button id="button_EliminarCustomer" mnemonicParsing="false" onMouseClicked="#handle_eliminarCustomer" prefHeight="30.0" prefWidth="248.0" styleClass="btnButtons" text="Eliminar" HBox.hgrow="ALWAYS" />
+                                <ImageView fitHeight="30.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true" />
+                                <Button id="button_AtrasCustomer" mnemonicParsing="false" onMouseClicked="#handle_AtrasCustomer" prefHeight="30.0" prefWidth="242.0" styleClass="btnButtons" text="Atrás" HBox.hgrow="ALWAYS" />
+                            </children>
+                        </HBox>
+                        <VBox fx:id="vbox_camposCustomer" layoutX="59.0" layoutY="321.0" prefHeight="312.0" prefWidth="311.0" spacing="10.0" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="52.0">
+                            <children>
+                                <Label fx:id="label_introduceDatosCustomer" prefHeight="20.0" prefWidth="430.0" styleClass="labelDescriptions" text="Introduce los datos" />
+                        <TextField fx:id="field_idCustomer" focusTraversable="false" managed="false" prefHeight="30.0" prefWidth="308.0" promptText="Introduce el Id" styleClass="campoDeTexto" />
+                                <TextField fx:id="field_NameCustomer" focusTraversable="false" prefHeight="30.0" prefWidth="308.0" promptText="Introduce el nombre" styleClass="campoDeTexto" />
+                                <TextField fx:id="field_CountryCustomer" focusTraversable="false" prefHeight="30.0" prefWidth="308.0" promptText="Introduce el pais" styleClass="campoDeTexto" />
+                                <TextField fx:id="field_AgeCustomer" focusTraversable="false" prefHeight="30.0" prefWidth="308.0" promptText="Introduce la edad" styleClass="campoDeTexto" />
+                                <TextField fx:id="field_EmailCustomer" focusTraversable="false" prefHeight="30.0" prefWidth="308.0" promptText="Introduce el correo" styleClass="campoDeTexto" />
+                                <TextField fx:id="field_PasswordCustomer" focusTraversable="false" prefHeight="30.0" prefWidth="308.0" promptText="Introduce la contraseña" styleClass="campoDeTexto" />
+                                <Button fx:id="button_siguienteCustomer" mnemonicParsing="false" onMouseClicked="#handle_siguienteCustomer" prefHeight="40.0" prefWidth="492.0" styleClass="btnButtons" text="Siguiente" />
+                            </children>
+                        </VBox>
+                        <HBox fx:id="hbox_textAreaCustomer" layoutX="57.6" layoutY="321.0" prefHeight="291.0" prefWidth="490.0" visible="false" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="55.0">
+                            <children>
+                                <TextArea fx:id="textArea_DatosCustomer" prefHeight="280.0" prefWidth="471.0" />
+                            </children>
+                        </HBox>
+                  <HBox layoutX="55.0" layoutY="136.0" prefHeight="30.0" prefWidth="308.0" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="52.0">
+                     <children>
+                        <Button id="button_ListaCustomer" mnemonicParsing="false" onMouseClicked="#handle_mostrarListaCustomer" prefHeight="30.0" prefWidth="242.0" styleClass="btnButtons" text="Mostrar Lista" HBox.hgrow="ALWAYS" />
+                        <ImageView fitHeight="30.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true" />
+                        <Button id="button_totalClientesCustomer" mnemonicParsing="false" onMouseClicked="#handle_totalCustomer" prefHeight="30.0" prefWidth="242.0" styleClass="btnButtons" text="Total Clientes" />
+                        <ImageView fitHeight="30.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true" />
+                        <Button id="button_consultaEdadCustomer" mnemonicParsing="false" onMouseClicked="#handle_consultaEdadCustomer" prefHeight="30.0" prefWidth="242.0" styleClass="btnButtons" text="Buscar (Edad)" />
+                     </children>
+                  </HBox>
+                    </children>
+                </AnchorPane>
+                <!--Stock Vehicle-->
+                <AnchorPane prefHeight="850.0" prefWidth="400.0" styleClass="anchorPaneMain" stylesheets="@../styles/stylesAdminstrator.css" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Label layoutX="94.0" layoutY="14.0" prefHeight="30.0" prefWidth="217.0" styleClass="labelTitle" text="Stock de Vehiculos" AnchorPane.leftAnchor="94.0" AnchorPane.rightAnchor="93.99999999999994">
+                            <font>
+                                <Font size="28.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="55.0" layoutY="214.0" prefHeight="20.0" prefWidth="134.0" styleClass="labelDescriptions" text="Introduce el Modelo(ModelY/Model3/ModelS/ModelX)" textFill="#6e6e6e" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="52.0">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="field_BusquedaStock" focusTraversable="false" layoutX="60.0" layoutY="240.0" prefHeight="30.0" prefWidth="308.0" styleClass="campoDeTexto" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="52.0" />
+                        <Button fx:id="button_buscarStock" layoutX="73.0" layoutY="287.0" mnemonicParsing="false" onMouseClicked="#handle_buscarStock" prefHeight="30.0" prefWidth="318.0" styleClass="btnButtons" text="Modificar" visible="false" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="52.0" />
+                        <HBox layoutX="72.0" layoutY="113.0" prefHeight="40.0" prefWidth="308.0" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="52.0">
+                            <children>
+                                <Button id="button_ConsultaStock" mnemonicParsing="false" onMouseClicked="#handle_modificarStock" prefHeight="40.0" prefWidth="248.0" styleClass="btnButtons" text="Modificar" HBox.hgrow="ALWAYS" />
+                                <ImageView fitHeight="30.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true" />
+                                <Button id="button_ListaStock" mnemonicParsing="false" onMouseClicked="#handle_mostrarListaStock" prefHeight="40.0" prefWidth="242.0" styleClass="btnButtons" text="Mostrar Lista" HBox.hgrow="ALWAYS" />
+                            </children>
+                        </HBox>
+                        <VBox fx:id="vbox_camposStock" layoutX="59.0" layoutY="321.0" prefHeight="312.0" prefWidth="311.0" spacing="10.0" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="52.0">
+                            <children>
+                                <Label prefHeight="20.0" prefWidth="430.0" styleClass="labelDescriptions" text="Introduce los datos" />
+                                <TextField fx:id="field_ModelYStock" focusTraversable="false" prefHeight="30.0" prefWidth="308.0" promptText="Model Y" styleClass="campoDeTexto" />
+                                <TextField fx:id="field_ModelXStock" focusTraversable="false" prefHeight="30.0" prefWidth="308.0" promptText="Model X" styleClass="campoDeTexto" />
+                                <TextField fx:id="field_Model3Stock" focusTraversable="false" prefHeight="30.0" prefWidth="308.0" promptText="Model 3" styleClass="campoDeTexto" />
+                                <TextField fx:id="field_ModelSStock" focusTraversable="false" prefHeight="30.0" prefWidth="308.0" promptText="Model S" styleClass="campoDeTexto" />
+                                <Button fx:id="button_siguienteStock" mnemonicParsing="false" onMouseClicked="#handle_siguienteStock" prefHeight="40.0" prefWidth="492.0" styleClass="btnButtons" text="Siguiente" />
+                            </children>
+                        </VBox>
+                        <HBox fx:id="hbox_textAreaStock" layoutX="57.6" layoutY="321.0" prefHeight="291.0" prefWidth="490.0" visible="false" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="55.0">
+                            <children>
+                                <TextArea fx:id="textArea_DatosStock" prefHeight="291.0" prefWidth="482.0" />
+                            </children>
+                        </HBox>
+                        <Button id="button_AtrasVehicle" layoutX="55.199999999999996" layoutY="161.0" mnemonicParsing="false" onMouseClicked="#handle_AtrasStock" prefHeight="40.0" prefWidth="242.0" styleClass="btnButtons" text="Atrás" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="52.0" />
+                  <Button id="button_totalStockVehicle" layoutX="55.0" layoutY="65.0" mnemonicParsing="false" onMouseClicked="#handle_totalStock" prefHeight="40.0" prefWidth="242.0" styleClass="btnButtons" text="Total Stock" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="52.0" />
+                    </children>
+                </AnchorPane>
+                <!--Vehicle-->
+                <AnchorPane prefHeight="850.0" prefWidth="400.0" styleClass="anchorPaneMain" stylesheets="@../styles/stylesAdminstrator.css" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Label layoutX="97.0" layoutY="14.0" prefHeight="30.0" prefWidth="217.0" styleClass="labelTitle" text="Vehiculos" AnchorPane.leftAnchor="97.0" AnchorPane.rightAnchor="95.79999999999995">
+                            <font>
+                                <Font size="28.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="label_buscadorVehicle" layoutX="55.0" layoutY="214.0" prefHeight="20.0" prefWidth="378.0" styleClass="labelDescriptions" text="Introduce el Modelo(ModelY/Model3/ModelS/ModelX)" textFill="#6e6e6e" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="52.0">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="field_BusquedaVehicle" focusTraversable="false" layoutX="60.0" layoutY="240.0" prefHeight="30.0" prefWidth="308.0" styleClass="campoDeTexto" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="52.0" />
+                        <Button fx:id="button_buscarVehicle" layoutX="60.0" layoutY="280.0" mnemonicParsing="false" onMouseClicked="#handle_buscarVehicle" prefHeight="30.0" prefWidth="318.0" styleClass="btnButtons" text="Buscar" visible="false" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="52.0" />
+                        <VBox fx:id="vbox_camposVehicle" layoutX="59.0" layoutY="321.0" prefHeight="312.0" prefWidth="311.0" spacing="10.0" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="52.0">
+                            <children>
+                                <Label fx:id="label_introduceDatosVehicle" prefHeight="20.0" prefWidth="439.0" styleClass="labelDescriptions" text="Introduce los datos" />
+                        <TextField fx:id="field_idVehicle" editable="false" focusTraversable="false" managed="false" prefHeight="30.0" prefWidth="308.0" promptText="Introduce el Id" styleClass="campoDeTexto" />
+                                <TextField fx:id="field_ModeloVehicle" editable="false" focusTraversable="false" prefHeight="30.0" prefWidth="308.0" promptText="Modelo" styleClass="campoDeTexto" />
+                                <TextField fx:id="field_EmailVehicle" focusTraversable="false" prefHeight="30.0" prefWidth="308.0" promptText="Introduce el correo" styleClass="campoDeTexto" />
+                                <TextField fx:id="field_PaintVehicle" focusTraversable="false" prefHeight="30.0" prefWidth="308.0" promptText="Introduce la pintura (White/Black/Red/Blue)" styleClass="campoDeTexto" />
+                                <TextField fx:id="field_PriceVehicle" editable="false" focusTraversable="false" prefHeight="30.0" prefWidth="308.0" promptText="El precio se actualizará automaticamente" styleClass="campoDeTexto" />
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <VBox fx:id="vBox_caracteristicasVehicle" prefHeight="96.0" prefWidth="234.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <RadioButton fx:id="rButton_EnhancedAutopilot" mnemonicParsing="false" text="Piloto Automático Mejorado">
+                                                    <toggleGroup>
+                                                        <ToggleGroup fx:id="grupoOpciones0AutonomousDriving" />
+                                                    </toggleGroup>
+                                                </RadioButton>
+                                                <RadioButton fx:id="rButton_selfDrivingCapability" mnemonicParsing="false" text="Capacidad total conducción autonoma" toggleGroup="$grupoOpciones0AutonomousDriving" />
+                                                <CheckBox fx:id="check_wallConnector" mnemonicParsing="false" text="Wall Connector" />
+                                            </children>
+                                        </VBox>
+                                        <VBox fx:id="vbox_Tarifa1Vehicle" prefHeight="96.0" prefWidth="160.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <RadioButton fx:id="rButton_rearWheelDrive" mnemonicParsing="false" text="Tracción Trasera">
+                                                    <toggleGroup>
+                                                        <ToggleGroup fx:id="grupoOpciones1Modely3" />
+                                                    </toggleGroup>
+                                                </RadioButton>
+                                                <RadioButton fx:id="rButton_highAutonomy" mnemonicParsing="false" text="Gran Autonomía" toggleGroup="$grupoOpciones1Modely3" />
+                                                <RadioButton fx:id="rButton_performance" mnemonicParsing="false" text="Performance" toggleGroup="$grupoOpciones1Modely3" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+                                <VBox fx:id="vbox_Tarifa2PlaidDualMotorVehicle" prefHeight="42.0" prefWidth="490.0" spacing="10.0" visible="false">
+                                    <children>
+                                        <RadioButton fx:id="rButton_DualMotor" mnemonicParsing="false" text="Motor Dual">
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="grupoOpciones2Modelsx" />
+                                            </toggleGroup>
+                                        </RadioButton>
+                                        <RadioButton fx:id="rButton_Plaid" mnemonicParsing="false" text="Plaid" toggleGroup="$grupoOpciones2Modelsx" />
+                                    </children>
+                                </VBox>
+                                <Button fx:id="button_actualizarPrecioVehicle" mnemonicParsing="false" onMouseClicked="#handle_actualizarPrecioVehicle" prefHeight="40.0" prefWidth="423.0" styleClass="btnButtons" text="Actualizar precio" />
+                                <Button fx:id="button_desactivarCamposVehicle" mnemonicParsing="false" onMouseClicked="#handle_desactivarCamposVehicle" prefHeight="40.0" prefWidth="492.0" styleClass="btnButtons" text="Desactivar campos" />
+                                <Button fx:id="button_siguienteVehicle" mnemonicParsing="false" onMouseClicked="#handle_siguienteVehicle" prefHeight="40.0" prefWidth="492.0" styleClass="btnButtons" text="Siguiente" />
+                            </children>
+                        </VBox>
+                        <HBox fx:id="hbox_textAreaVehicle" layoutX="57.6" layoutY="321.0" prefHeight="291.0" prefWidth="490.0" visible="false" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="55.0">
+                            <children>
+                                <TextArea fx:id="textArea_DatosVehicle" prefHeight="291.0" prefWidth="482.0" />
+                            </children>
+                        </HBox>
+                        <HBox layoutX="176.0" layoutY="60.0" prefHeight="30.0" prefWidth="308.0" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="52.0">
+                            <children>
+                                <Button id="button_AnadirVehicle" mnemonicParsing="false" onMouseClicked="#handle_anadirVehicle" prefHeight="30.0" prefWidth="248.0" styleClass="btnButtons" text="Añadir" HBox.hgrow="ALWAYS" />
+                                <ImageView fitHeight="30.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true" />
+                                <Button id="button_ModificarVehicle" mnemonicParsing="false" onMouseClicked="#handle_modificarVehicle" prefHeight="30.0" prefWidth="242.0" styleClass="btnButtons" text="Modificar" HBox.hgrow="ALWAYS" />
+                            </children>
+                        </HBox>
+                        <HBox layoutX="225.0" layoutY="98.0" prefHeight="30.0" prefWidth="308.0" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="52.0">
+                            <children>
+                                <Button id="button_ConsultaVehicle" mnemonicParsing="false" onMouseClicked="#handle_consultaVehicle" prefHeight="30.0" prefWidth="248.0" styleClass="btnButtons" text="Buscar (ID)" HBox.hgrow="ALWAYS" />
+                                <ImageView fitHeight="30.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true" />
+                                <Button id="button_consultaModelVehicle" mnemonicParsing="false" onMouseClicked="#handle_consultaModelVehicle" prefHeight="30.0" prefWidth="242.0" styleClass="btnButtons" text="Buscar (Model)" HBox.hgrow="ALWAYS" />
+                        <ImageView fitHeight="30.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true" />
+                        <Button id="button_consultaCustomervehicle" mnemonicParsing="false" onMouseClicked="#handle_consultaCustomerVehicle" prefHeight="30.0" prefWidth="242.0" styleClass="btnButtons" text="Buscar (Cliente)" />
+                            </children>
+                        </HBox>
+                        <HBox layoutX="343.0" layoutY="174.0" prefHeight="30.0" prefWidth="308.0" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="52.0">
+                            <children>
+                                <Button id="button_EliminarVehicle" mnemonicParsing="false" onMouseClicked="#handle_eliminarVehicle" prefHeight="30.0" prefWidth="248.0" styleClass="btnButtons" text="Eliminar" HBox.hgrow="ALWAYS" />
+                                <ImageView fitHeight="30.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true" />
+                                <Button id="button_AtrasVehicle" mnemonicParsing="false" onMouseClicked="#handle_AtrasVehicle" prefHeight="30.0" prefWidth="242.0" styleClass="btnButtons" text="Atrás" HBox.hgrow="ALWAYS" />
+                            </children>
+                        </HBox>
+                  <HBox layoutX="186.0" layoutY="136.0" prefHeight="30.0" prefWidth="308.0" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="52.0">
+                     <children>
+                        <Button id="button_totalVehicles" mnemonicParsing="false" onMouseClicked="#handle_totalVehicles" prefHeight="30.0" prefWidth="248.0" styleClass="btnButtons" text="Total Vehiculos" HBox.hgrow="ALWAYS" />
+                        <ImageView fitHeight="30.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true" />
+                        <Button id="button_totalModelVehicle" mnemonicParsing="false" onMouseClicked="#handle_totalModelVehicles" prefHeight="30.0" prefWidth="242.0" styleClass="btnButtons" text="Total (Model)" HBox.hgrow="ALWAYS" />
+                        <ImageView fitHeight="30.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true" />
+                        <Button id="button_ListaVehicle" mnemonicParsing="false" onMouseClicked="#handle_mostrarListaVehicle" prefHeight="30.0" prefWidth="242.0" styleClass="btnButtons" text="Mostrar Lista" />
+                     </children>
+                  </HBox>
+                    </children>
+                </AnchorPane>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>

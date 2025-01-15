@@ -1,0 +1,148 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <!-- La versión del modelo POM utilizado -->
+    <modelVersion>4.0.0</modelVersion>
+    <!-- El identificador del grupo al que pertenece el proyecto (generalmente el dominio en reversa) -->
+    <groupId>com.henryat.TeslaFXStore</groupId>
+    <!-- El identificador del artefacto o nombre del proyecto -->
+    <artifactId>TeslaFXStore</artifactId>
+    <!-- La versión del artefacto o proyecto -->
+    <version>1.0-SNAPSHOT</version>
+    <properties>
+        <!-- La codificación de caracteres utilizada para el código fuente del proyecto -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- La versión del lenguaje Java utilizada para compilar el código fuente -->
+        <maven.compiler.source>22</maven.compiler.source>
+        <!-- La versión del bytecode generado para asegurar la compatibilidad -->
+        <maven.compiler.target>22</maven.compiler.target>
+    </properties>
+    <dependencies>
+        <!-- Dependencia para los controles de interfaz de usuario de JavaFX -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>22.0.2</version>
+        </dependency>
+        
+        <!-- Dependencia para el soporte de FXML en JavaFX -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>22.0.2</version>
+        </dependency>
+
+        <!-- Dependencia para el manejo de medios en JavaFX -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-media</artifactId>
+            <version>22.0.2</version>
+        </dependency>
+        
+        <!-- Dependencia para el controlador síncrono de MongoDB -->
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongodb-driver-sync</artifactId>
+            <version>5.1.2</version>
+        </dependency>
+
+        <!-- Dependencia para BSON (Binary JSON) necesario para trabajar con MongoDB -->
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>bson</artifactId>
+            <version>5.1.2</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <!-- Plugin para la compilación de código Java -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version>
+                <configuration>
+                    <!-- Especifica la versión del JDK para la generación del bytecode -->
+                    <release>22</release>
+                    <!-- Especifica la versión del lenguaje Java -->
+                    <source>22</source>
+                    <target>22</target>
+                </configuration>
+            </plugin>
+
+            <!--Plugin para la generación de documentación-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.10.0</version>
+                <configuration>
+                    <source>22</source>
+                    <outputDirectory>${project.build.directory}/site/apidocs</outputDirectory>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                    <!-- Asegúrate de que no hay exclusiones que estén afectando -->
+                    <excludes>
+                        <exclude>**/excludedpackage/**</exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+
+            <!-- Plugin para integrar JavaFX en el ciclo de vida de Maven -->
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.8</version>
+                <configuration>
+                    <!-- La clase principal de la aplicación JavaFX -->
+                    <mainClass>app.App</mainClass>
+                </configuration>
+                <executions>
+                    <!-- Configuración predeterminada para ejecutar la aplicación -->
+                    <execution>
+                        <!-- Usage: mvn clean javafx:run -->
+                        <id>default-cli</id>
+                        <!-- Esta ejecución permite ejecutar la aplicación con el comando: mvn clean javafx:run -->
+                    </execution>
+                    
+                    <!-- Configuración para depuración manual -->
+                    <execution>
+                        <!-- Usage: mvn clean javafx:run@debug -->
+                        <id>debug</id>
+                        <configuration>
+                            <options>
+                                <!-- Opciones para depuración remota -->
+                                <option>-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=localhost:8000</option>
+                            </options>
+                        </configuration>
+                    </execution>
+                    
+                    <!-- Configuración para depuración automática desde el IDE -->
+                    <execution>
+                        <!-- Configuration for automatic IDE debugging -->
+                        <id>ide-debug</id>
+                        <configuration>
+                            <options>
+                                <!-- Opciones para depuración automática con el IDE -->
+                                <option>-agentlib:jdwp=transport=dt_socket,server=n,address=${jpda.address}</option>
+                            </options>
+                        </configuration>
+                    </execution>
+                    
+                    <!-- Configuración para perfilado automático desde el IDE -->
+                    <execution>
+                        <id>ide-profile</id>
+                        <configuration>
+                            <options>
+                                <!-- Opciones para el perfilado automático -->
+                                <option>${profiler.jvmargs.arg1}</option>
+                                <option>${profiler.jvmargs.arg2}</option>
+                                <option>${profiler.jvmargs.arg3}</option>
+                                <option>${profiler.jvmargs.arg4}</option>
+                                <option>${profiler.jvmargs.arg5}</option>
+                            </options>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
