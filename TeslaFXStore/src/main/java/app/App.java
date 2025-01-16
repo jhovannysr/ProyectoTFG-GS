@@ -17,7 +17,6 @@ import javafx.stage.StageStyle;
  */
 public class App extends Application {
 
-    // Constructor por defecto vacío
     public App() {
     }
 
@@ -30,12 +29,9 @@ public class App extends Application {
 
             Pane ventana = (Pane) loader.load();
 
-            // Show the scene containing the root layout.
             Scene scene = new Scene(ventana);
             scene.setFill(Color.TRANSPARENT);
 
-            // Para quitar la barra principal del Layout por defecto
-//            primaryStage.setMaximized(true);
             primaryStage.setTitle("Tesla Shop");
             primaryStage.initStyle(StageStyle.UNDECORATED);
             primaryStage.setScene(scene);
@@ -45,22 +41,7 @@ public class App extends Application {
         }
     }
 
-    /**
-     * The main entry point for the JavaFX application.
-     *
-     * @param args command line arguments
-     */
     public static void main(String[] args) {
         launch(args);
     }
-
-    //            loader.setLocation(App.class.getResource("/view/Login.fxml"));
-//            loader.setLocation(App.class.getResource("/view/CrearCuenta.fxml"));
-//            loader.setLocation(App.class.getResource("/view/HomeConSesion.fxml"));
-//            loader.setLocation(App.class.getResource("/view/MisDatos.fxml"));
-//            loader.setLocation(App.class.getResource("/view/VehicleModelS.fxml"));
-//            loader.setLocation(App.class.getResource("/view/VehicleModelX.fxml"));
-//            loader.setLocation(App.class.getResource("/view/VehicleModelY.fxml"));
-//            loader.setLocation(App.class.getResource("/view/VehicleModel3.fxml"));
-//            loader.setLocation(App.class.getResource("/view/AdministratorMode.fxml"));
 }
