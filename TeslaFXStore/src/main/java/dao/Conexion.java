@@ -10,9 +10,9 @@ import com.mongodb.client.MongoClients;
 public class Conexion {
 
     /**
-     * Conexion a la base de datos
+     * Ejemplo de URI (reemplazar con variables de entorno en proyectos reales)
      */
-    static final String URI = "mongodb+srv://Jhovannyat:TeslaFX2024@teslafxcluster.pqmsy.mongodb.net/";
+    static final String URI = "mongodb+srv://usuario:contraseña@cluster.mongodb.net/";
     private static final MongoClient mongoClient;
 
     static {
